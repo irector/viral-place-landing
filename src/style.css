@@ -97,4 +97,10 @@ body {
 .play:before {
   content: "\e908";
 }
+.right:before {
+  content: "\e909";
+}
+.left:before {
+  content: "\e90a";
+}
 

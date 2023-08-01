@@ -4,44 +4,70 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Viral Places</title>
+    <title>Viral Place</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap" rel="stylesheet">
   </head>
   <body>
 
     <!--Container-->
-    <div class="h-20 max-w-[1440px] mx-auto px-2 pt-2">
+    <div class="max-w-[1440px] mx-auto px-2 pt-2">
 
       <!--Header-->
-      <div class="flex justify-between items-center">
-        <div class="hidden md:flex space-x-2">
-          <div id="pl" class="h-20 px-6 bg-white rounded-3xl flex justify-center items-center cursor-pointer group [&.active]:bg-accent">
-            <img src="/pl.png" alt="pl"><span class="ml-2 group-[.active]:text-white">PL</span>
+      <div class="flex justify-between items-center bg-primary">
+        <div class="flex space-x-2">
+          <div id="pl" class="h-[42px] md:h-20 px-2 md:px-6 bg-white rounded-[14px] md:rounded-3xl flex justify-center items-center cursor-pointer group [&.active]:bg-accent">
+            <img class="max-[360px]:w-[20px]" src="/pl.svg" alt="pl"><span class="max-md:text-[14px] ml-2 group-[.active]:text-white">PL</span>
           </div>
-          <div id="en" class="h-20 px-6 bg-white rounded-3xl flex justify-center items-center cursor-pointer group [&.active]:bg-accent">
-            <img src="/en.png" alt="en"><span class="ml-2 group-[.active]:text-white">EN</span>
+          <div id="en" class="h-[42px] md:h-20 px-2 md:px-6 bg-white rounded-[14px] md:rounded-3xl flex justify-center items-center cursor-pointer group [&.active]:bg-accent">
+            <img class="max-[360px]:w-[20px]" src="/en.svg" alt="en"><span class="max-md:text-[14px] ml-2 group-[.active]:text-white">EN</span>
           </div>
         </div>
 
-        <div class="mx-auto py-2">
+        <div class="hidden sm:block mx-auto py-2">
           <img src="/logo.svg" alt="logo">
         </div>
 
-        <div class="hidden bg-white h-20 px-8 md:flex justify-center items-center rounded-[62px] text-accent cursor-pointer">
+        <div class="bg-white h-[42px] md:h-20 px-3 md:px-8 flex justify-center items-center rounded-[17px] md:rounded-[27px] text-accent cursor-pointer max-md:text-[14px]">
           <span class="icons creator mr-2"></span>
           Become Creator
         </div>
       </div>
       <!--End Header-->
 
+      <!--Sticky Header-->
+      <div id="header" class="z-50 fixed w-full max-w-[1440px] mx-auto px-2 left-0 right-0 top-0 -translate-y-full [&.active]:translate-y-0 transition-all duration-300">
+        <div class="flex justify-between items-center bg-primary py-2 sm:px-2">
+          <div class="py-2">
+            <img class="hidden sm:block" src="/logo.svg" alt="logo">
+            <img class="block sm:hidden" src="/logo-small.svg" alt="logo">
+          </div>
+
+          <div class="flex space-x-2">
+            <div class="bg-accent h-[42px] md:h-20 px-3 md:px-8 flex justify-center items-center rounded-[17px] md:rounded-[27px] text-white cursor-pointer max-md:text-[14px]">
+              <span class="icons order mr-2"></span>
+              <span class="max-[380px]:block hidden">Order</span>
+              <span class="max-[380px]:hidden block">Make an order</span>
+            </div>
+
+            <div class="bg-[#F1F1F9] h-[42px] md:h-20 px-3 md:px-8 flex justify-center items-center rounded-[17px] md:rounded-[27px] text-[#0F65E5] cursor-pointer max-md:text-[14px]">
+              <span class="icons book mr-2"></span>
+              <span class="max-[380px]:block hidden">Book</span>
+              <span class="max-[380px]:hidden block">Book a Meeting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Sticky Header-->
+
       <!--Screen-1-->
-      <div class="w-full bg-white mt-2 py-[68px] sm:py-[100px] rounded-[38px] md:rounded-[59px] px-4">
+      <div class="relative w-full bg-white mt-2 pt-[24px] pb-[200px] md:py-[100px] rounded-[38px] md:rounded-[59px] px-4 overflow-hidden">
+        <div class="block sm:hidden flex w-full justify-center mb-8"><img src="/logo-black.svg" alt="logo-black"></div>
         <div class="max-w-[594px] mx-auto">
           <h1 class="flex flex-col sm:inline-block sm:text-7xl leading-[115%] text-center">
-            <span class="text-[69px] leading-[115%]">Video</span> <span class="text-[57px] leading-[115%]">that sells</span> <span class="text-[42px] leading-[115%]">Starting at $100</span>
+            <span class="max-sm:text-[69px] leading-[115%]">Video</span> <span class="max-sm:text-[57px] leading-[115%]">that sells</span> <span class="max-sm:text-[42px] leading-[115%]">Starting at $100</span>
           </h1>
           <h2 class="mt-6 text-center text-xl text-secondary">Real users will create engaging content with your product or service. Script and video editing is on them</h2>
         </div>
@@ -56,6 +82,12 @@
             Book a Meeting
           </div>
         </div>
+
+        <div class="w-[192px] xl:w-[236px] absolute -left-4 bottom-2 md:bottom-6 md:-left-16 lg:left-8"><img class="w-full" src="/fire.png" alt="fire"></div>
+        <div class="w-[196px] xl:w-[240px] absolute right-2 -bottom-2 md:top-6 md:-right-20 lg:right-6"><img class="w-full" src="/camera.png" alt="camera"></div>
+
+        <div class="absolute mx-auto left-0 sm:left-auto -top-[280px] sm:top-0 right-0 sm:translate-x-1/2 sm:-translate-y-1/2 w-[328px] h-[328px] rounded-full opacity-40 bg-[#0F65E5] blur-[80px]"></div>
+        <div class="absolute mx-auto right-0 sm:right-auto -bottom-[200px] sm:bottom-0 left-0 sm:-translate-x-1/2 sm:translate-y-1/2 w-[328px] h-[328px] rounded-full opacity-40 bg-[#EF4D2A] blur-[80px]"></div>
       </div>
       <!--End Screen-1-->
 
@@ -77,281 +109,285 @@
       <!--End Screen-2-->
 
       <!--Screen-3-->
-      <div class="mt-2 flex flex-col lg:flex-row space-x-2">
-        <div class="w-full lg:w-1/6">
-          <swiper-container
-            class="thumb space-x-2 lg:space-x-0 lg:space-y-2"
-            id="thumbs"
-            init="false"
-          >
-            <swiper-slide class="w-auto lg:w-full h-[80px] lg:h-[140px] bg-white flex flex-col justify-center items-center px-6 lg:px-0 lg:py-6 rounded-[20px] lg:rounded-[46px] cursor-pointer [&.active]:bg-accent [&.active]:text-white">
-              <span class="icons advertising mb-3"></span>
-              <span class="text-xl leading-none">Paid Advertising</span>
-            </swiper-slide>
-            <swiper-slide class="w-auto lg:w-full h-[80px] lg:h-[140px] bg-white flex flex-col justify-center items-center px-6 lg:px-0 lg:py-6 rounded-[20px] lg:rounded-[46px] cursor-pointer [&.active]:bg-accent [&.active]:text-white">
-              <span class="icons product mb-3"></span>
-              <span class="text-xl leading-none">Product in Use</span>
-            </swiper-slide>
-            <swiper-slide class="w-auto lg:w-full h-[80px] lg:h-[140px] bg-white flex flex-col justify-center items-center px-6 lg:px-0 lg:py-6 rounded-[20px] lg:rounded-[46px] cursor-pointer [&.active]:bg-accent [&.active]:text-white">
-              <span class="icons recommendation mb-3"></span>
-              <span class="text-xl leading-none">Recommendation</span>
-            </swiper-slide>
-            <swiper-slide class="w-auto lg:w-full h-[80px] lg:h-[140px] bg-white flex flex-col justify-center items-center px-6 lg:px-0 lg:py-6 rounded-[20px] lg:rounded-[46px] cursor-pointer [&.active]:bg-accent [&.active]:text-white">
-              <span class="icons video mb-3"></span>
-              <span class="text-xl leading-none">Short Video</span>
-            </swiper-slide>
-            <swiper-slide class="w-auto lg:w-full h-[80px] lg:h-[140px] bg-white flex flex-col justify-center items-center px-6 lg:px-0 lg:py-6 rounded-[20px] lg:rounded-[46px] cursor-pointer [&.active]:bg-accent [&.active]:text-white">
-              <span class="icons box mb-3"></span>
-              <span class="text-xl leading-none">Unboxing</span>
-            </swiper-slide>
-          </swiper-container>
-        </div>
-        <div class="mt-1 lg:mt-0 w-full lg:w-5/6 bg-white rounded-[59px] overflow-hidden">
-          <swiper-container thumbs-swiper=".thumb" thumbs-slide-thumb-active-class="active" class="h-full" id="slider">
-            <swiper-slide class="pl-[88px] flex slide-video group">
-              <div class="my-auto w-2/5">
-                <div class="flex">
-                  <div class="flex justify-center items-center w-[48px] h-[48px] bg-[#F1F1F9] rounded-lg"><span class="icons advertising !text-[40px] text-[#0F65E5]"></span></div>
-                  <div class="flex space-x-3 ml-2">
-                    <img src="/tiktok.svg" alt="tiktok">
-                    <img src="/google.svg" alt="google">
-                    <img src="/youtube.svg" alt="youtube">
-                    <img src="/facebook.svg" alt="facebook">
-                    <img src="/instagram.svg" alt="instagram">
-                    <img src="/twitter.svg" alt="twitter">
-                  </div>
-                </div>
-                <div class="mt-2 text-[40px] leading-[115%]">Video for paid ads</div>
-                <div class="mt-3 text-xl leading-[30px] text-secondary font-normal">An engaging video in which the creator presents your offer in a natural way, lending his image at the same time. Forget stock materials for your paid ads!</div>
-              </div>
-              <div class="relative overflow-hidden h-full w-3/5 flex justify-center items-center">
-                <div class="h-[calc(100%-70px)] w-[360px] rounded-[42px] z-10 mt-4 bg-black relative z-10">
-                  <div class="absolute -top-[10px] rounded-[42px] w-[calc(100%-20px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto"></div>
-                  <div class="absolute -top-[18px] rounded-[42px] w-[calc(100%-36px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto opacity-[0.34]"></div>
-                  
-                  <div class="h-full rounded-[42px] overflow-hidden relative cursor-pointer">
-                    <video class="h-full object-cover" src="https://firebasestorage.googleapis.com/v0/b/viralplaceapp.appspot.com/o/video_type_preview_videos%2Fpaid_ads.mov?alt=media&token=1f42e9c0-324a-47be-9346-df3f78605ed6"></video>
-                    <div class="absolute w-[56px] h-[56px] rounded-full bg-accent z-10 top-1/2 left-1/2 -translate-x-[28px] -translate-y-7 flex justify-center items-center group-[.active]:hidden">
-                      <span class="icons play -ml-[2px] text-white cursor-pointer"></span>
+      <div>
+        <h2 class="lg:hidden text-[40px] leading-[115%] text-white text-center py-8">Video examples</h2>
+        <div class="mt-2 flex flex-col lg:flex-row md:space-x-2">
+          <div class="w-full min-w-[220px] lg:w-1/6">
+            <swiper-container
+                    class="thumb space-x-2 lg:space-x-0 lg:space-y-2"
+                    id="thumbs"
+                    init="false"
+            >
+              <swiper-slide class="w-auto lg:w-full h-[80px] lg:h-[140px] bg-white flex flex-col justify-center items-center px-6 lg:px-0 lg:py-6 rounded-[20px] md:rounded-[46px] cursor-pointer [&.active]:bg-accent [&.active]:text-white">
+                <span class="icons advertising mb-3"></span>
+                <span class="text-xl leading-none">Paid Advertising</span>
+              </swiper-slide>
+              <swiper-slide class="w-auto lg:w-full h-[80px] lg:h-[140px] bg-white flex flex-col justify-center items-center px-6 lg:px-0 lg:py-6 rounded-[20px] md:rounded-[46px] cursor-pointer [&.active]:bg-accent [&.active]:text-white">
+                <span class="icons product mb-3"></span>
+                <span class="text-xl leading-none">Product in Use</span>
+              </swiper-slide>
+              <swiper-slide class="w-auto lg:w-full h-[80px] lg:h-[140px] bg-white flex flex-col justify-center items-center px-6 lg:px-0 lg:py-6 rounded-[20px] md:rounded-[46px] cursor-pointer [&.active]:bg-accent [&.active]:text-white">
+                <span class="icons recommendation mb-3"></span>
+                <span class="text-xl leading-none">Recommendation</span>
+              </swiper-slide>
+              <swiper-slide class="w-auto lg:w-full h-[80px] lg:h-[140px] bg-white flex flex-col justify-center items-center px-6 lg:px-0 lg:py-6 rounded-[20px] md:rounded-[46px] cursor-pointer [&.active]:bg-accent [&.active]:text-white">
+                <span class="icons video mb-3"></span>
+                <span class="text-xl leading-none">Short Video</span>
+              </swiper-slide>
+              <swiper-slide class="w-auto lg:w-full h-[80px] lg:h-[140px] bg-white flex flex-col justify-center items-center px-6 lg:px-0 lg:py-6 rounded-[20px] md:rounded-[46px] cursor-pointer [&.active]:bg-accent [&.active]:text-white">
+                <span class="icons box mb-3"></span>
+                <span class="text-xl leading-none">Unboxing</span>
+              </swiper-slide>
+            </swiper-container>
+          </div>
+          <div class="max-lg:mt-2 w-auto md:w-full lg:w-5/6 md:bg-white md:rounded-[59px] overflow-hidden relative ">
+            <swiper-container init="false" class=" h-full" id="slider">
+              <swiper-slide class="!w-full md:pl-[56px] xl:pl-[88px] flex slide-video group md:py-8 lg:py-0">
+                <div class="flex relative w-full md:w-auto justify-center">
+                  <div class="absolute z-20 md:static my-auto w-[380px] md:w-2/5 max-w-[100%] md:max-w-auto px-4 md:px-0 bottom-6 max-md:group-[.active]:hidden">
+                    <div class="flex">
+                      <div class="flex justify-center items-center md:w-[48px] md:h-[48px] md:bg-[#F1F1F9] rounded-lg"><span class="icons advertising md:!text-[40px] text-white md:text-[#0F65E5]"></span></div>
+                      <div class="hidden md:flex space-x-3 ml-2">
+                        <img src="/tiktok.svg" alt="tiktok">
+                        <img src="/google.svg" alt="google">
+                        <img src="/youtube.svg" alt="youtube">
+                        <img src="/facebook.svg" alt="facebook">
+                        <img src="/instagram.svg" alt="instagram">
+                        <img src="/twitter.svg" alt="twitter">
+                      </div>
                     </div>
-                    <div class="absolute text-white z-10 top-6 left-6 leading-[115%]">
-                      <div class="mb-2">Mike</div>
-                      <div class="flex items-center"><img src="/logo-2.svg" alt="logo" class="mr-1"> @ViralPlace</div>
-                    </div>
+                    <div class="mt-2 text-white md:text-primary text-[16px] md:text-[40px] leading-[115%]">Video for paid ads</div>
+                    <div class="mt-1 md:mt-3 text-[14px] md:text-xl leading-[150%] md:leading-[30px] text-[#F1F1F9] md:text-secondary font-normal">An engaging video in which the creator presents your offer in a natural way, lending his image at the same time. Forget stock materials for your paid ads!</div>
                   </div>
-                </div>
-              </div>
-              <div class="absolute -right-8 top-0 -translate-y-1/2 w-[700px]"><img src="/slide-1-1.png" alt="bg"></div>
-              <div class="absolute -right-8 bottom-0 translate-y-1/2 w-[700px]"><img src="/slide-1-2.png" alt="bg"></div>
-            </swiper-slide>
-            <swiper-slide class="pl-[88px] flex slide-video group">
-              <div class="my-auto w-2/5">
-                <div class="flex">
-                  <div class="flex justify-center items-center w-[48px] h-[48px] bg-[#F1F1F9] rounded-lg"><span class="icons advertising !text-[40px] text-[#0F65E5]"></span></div>
-                  <div class="flex space-x-3 ml-2">
-                    <img src="/tiktok.svg" alt="tiktok">
-                    <img src="/google.svg" alt="google">
-                    <img src="/youtube.svg" alt="youtube">
-                    <img src="/facebook.svg" alt="facebook">
-                    <img src="/instagram.svg" alt="instagram">
-                    <img src="/twitter.svg" alt="twitter">
-                  </div>
-                </div>
-                <div class="mt-2 text-[40px] leading-[115%]">Unboxing</div>
-                <div class="mt-3 text-xl leading-[30px] text-secondary font-normal">An eternally popular and effective type of video in which the creator unpacks a package with products from your company. Such a video will attract the attention of the audience, generate views and help to increase sales.</div>
-              </div>
-              <div class="relative overflow-hidden h-full w-3/5 flex justify-center items-center">
-                <div class="h-[calc(100%-70px)] w-[360px] rounded-[42px] z-10 mt-4 bg-black relative z-10">
-                  <div class="absolute -top-[10px] rounded-[42px] w-[calc(100%-20px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto"></div>
-                  <div class="absolute -top-[18px] rounded-[42px] w-[calc(100%-36px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto opacity-[0.34]"></div>
+                  <div class="relative overflow-hidden h-full w-full md:w-3/5 flex justify-center items-center">
+                    <div class="h-auto md:h-[calc(100%-70px)] max-w-[100%] w-[380px] md:w-[360px] rounded-[42px] z-10 mt-0 md:mt-4 bg-black relative z-10">
+                      <div class="hidden md:block absolute -top-[10px] rounded-[42px] w-[calc(100%-20px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto"></div>
+                      <div class="hidden md:block absolute -top-[18px] rounded-[42px] w-[calc(100%-36px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto opacity-[0.34]"></div>
 
-                  <div class="h-full rounded-[42px] overflow-hidden relative cursor-pointer">
-                    <video class="h-full object-cover" src="https://firebasestorage.googleapis.com/v0/b/viralplaceapp.appspot.com/o/video_type_preview_videos%2Fproduct_in_use.mp4?alt=media&token=df84e603-c421-49f4-bb4b-9aeeca785c23"></video>
-                    <div class="absolute w-[56px] h-[56px] rounded-full bg-accent z-10 top-1/2 left-1/2 -translate-x-[28px] -translate-y-7 flex justify-center items-center group-[.active]:hidden">
-                      <span class="icons play -ml-[2px] text-white cursor-pointer"></span>
-                    </div>
-                    <div class="absolute text-white z-10 top-6 left-6 leading-[115%]">
-                      <div class="mb-2">Mike</div>
-                      <div class="flex items-center"><img src="/logo-2.svg" alt="logo" class="mr-1"> @ViralPlace</div>
+                      <div class="h-full rounded-[42px] overflow-hidden relative cursor-pointer">
+                        <video class="w-full h-full object-cover" src="https://firebasestorage.googleapis.com/v0/b/viralplaceapp.appspot.com/o/video_type_preview_videos%2Fpaid_ads.mov?alt=media&token=1f42e9c0-324a-47be-9346-df3f78605ed6"></video>
+                        <div class="absolute w-[56px] h-[56px] rounded-full bg-accent z-10 top-1/2 left-1/2 -translate-x-[28px] -translate-y-7 flex justify-center items-center group-[.active]:hidden">
+                          <span class="icons play -ml-[2px] text-white cursor-pointer"></span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="absolute -right-8 top-0 -translate-y-1/2 w-[700px]"><img src="/slide-1-1.png" alt="bg"></div>
-              <div class="absolute -right-8 bottom-0 translate-y-1/2 w-[700px]"><img src="/slide-1-2.png" alt="bg"></div>
-            </swiper-slide>
-            <swiper-slide class="pl-[88px] flex slide-video group">
-              <div class="my-auto w-2/5">
-                <div class="flex">
-                  <div class="flex justify-center items-center w-[48px] h-[48px] bg-[#F1F1F9] rounded-lg"><span class="icons advertising !text-[40px] text-[#0F65E5]"></span></div>
-                  <div class="flex space-x-3 ml-2">
-                    <img src="/tiktok.svg" alt="tiktok">
-                    <img src="/google.svg" alt="google">
-                    <img src="/youtube.svg" alt="youtube">
-                    <img src="/facebook.svg" alt="facebook">
-                    <img src="/instagram.svg" alt="instagram">
-                    <img src="/twitter.svg" alt="twitter">
+                <div class="hidden md:block absolute -right-8 top-0 -translate-y-1/2 w-[700px]"><img src="/slide-1-1.png" alt="bg"></div>
+                <div class="hidden md:block absolute -right-8 bottom-0 translate-y-1/2 w-[700px]"><img src="/slide-1-2.png" alt="bg"></div>
+              </swiper-slide>
+              <swiper-slide class="!w-full md:pl-[56px] xl:pl-[88px] flex slide-video group md:py-8 lg:py-0">
+                <div class="flex relative w-full md:w-auto justify-center">
+                  <div class="absolute z-20 md:static my-auto w-[380px] md:w-2/5 max-w-[100%] md:max-w-auto px-4 md:px-0 bottom-6 max-md:group-[.active]:hidden">
+                    <div class="flex">
+                      <div class="flex justify-center items-center md:w-[48px] md:h-[48px] md:bg-[#F1F1F9] rounded-lg"><span class="icons box md:!text-[40px] text-white md:text-[#0F65E5]"></span></div>
+                      <div class="hidden md:flex space-x-3 ml-2">
+                        <img src="/tiktok.svg" alt="tiktok">
+                        <img src="/google.svg" alt="google">
+                        <img src="/youtube.svg" alt="youtube">
+                        <img src="/facebook.svg" alt="facebook">
+                        <img src="/instagram.svg" alt="instagram">
+                        <img src="/twitter.svg" alt="twitter">
+                      </div>
+                    </div>
+                    <div class="mt-2 text-white md:text-primary text-[16px] md:text-[40px] leading-[115%]">Product in use</div>
+                    <div class="mt-1 md:mt-3 text-[14px] md:text-xl leading-[150%] md:leading-[30px] text-[#F1F1F9] md:text-secondary font-normal">This type of video presents the user using the product in a practical way, demonstrating its functions, advantages and capabilities. Thanks to this approach, potential customers can better understand how the product can meet their needs and what benefits it can bring them.</div>
                   </div>
-                </div>
-                <div class="mt-2 text-[40px] leading-[115%]">TikTok, Reels, Shorts</div>
-                <div class="mt-3 text-xl leading-[30px] text-secondary font-normal">Engaging short videos for Tiktok and other platforms that will generate an interface, increase your followers and see your community and trust among customers.</div>
-              </div>
-              <div class="relative overflow-hidden h-full w-3/5 flex justify-center items-center">
-                <div class="h-[calc(100%-70px)] w-[360px] rounded-[42px] z-10 mt-4 bg-black relative z-10">
-                  <div class="absolute -top-[10px] rounded-[42px] w-[calc(100%-20px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto"></div>
-                  <div class="absolute -top-[18px] rounded-[42px] w-[calc(100%-36px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto opacity-[0.34]"></div>
+                  <div class="relative overflow-hidden h-full w-full md:w-3/5 flex justify-center items-center">
+                    <div class="h-auto md:h-[calc(100%-70px)] max-w-[100%] w-[380px] md:w-[360px] rounded-[42px] z-10 mt-0 md:mt-4 bg-black relative z-10">
+                      <div class="hidden md:block absolute -top-[10px] rounded-[42px] w-[calc(100%-20px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto"></div>
+                      <div class="hidden md:block absolute -top-[18px] rounded-[42px] w-[calc(100%-36px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto opacity-[0.34]"></div>
 
-                  <div class="h-full rounded-[42px] overflow-hidden relative cursor-pointer">
-                    <video class="h-full object-cover" src="https://firebasestorage.googleapis.com/v0/b/viralplaceapp.appspot.com/o/video_type_preview_videos%2Frecommendation.mp4?alt=media&token=f687b6da-3ee6-4af9-8c32-8385e02e3c0a"></video>
-                    <div class="absolute w-[56px] h-[56px] rounded-full bg-accent z-10 top-1/2 left-1/2 -translate-x-[28px] -translate-y-7 flex justify-center items-center group-[.active]:hidden">
-                      <span class="icons play -ml-[2px] text-white cursor-pointer"></span>
-                    </div>
-                    <div class="absolute text-white z-10 top-6 left-6 leading-[115%]">
-                      <div class="mb-2">Mike</div>
-                      <div class="flex items-center"><img src="/logo-2.svg" alt="logo" class="mr-1"> @ViralPlace</div>
+                      <div class="h-full rounded-[42px] overflow-hidden relative cursor-pointer">
+                        <video class="w-full h-full object-cover" src="https://firebasestorage.googleapis.com/v0/b/viralplaceapp.appspot.com/o/video_type_preview_videos%2Funboxing.mp4?alt=media&token=d3bee4fe-ac11-40b3-b035-0c6010efde8a"></video>
+                        <div class="absolute w-[56px] h-[56px] rounded-full bg-accent z-10 top-1/2 left-1/2 -translate-x-[28px] -translate-y-7 flex justify-center items-center group-[.active]:hidden">
+                          <span class="icons play -ml-[2px] text-white cursor-pointer"></span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="absolute -right-8 top-0 -translate-y-1/2 w-[700px]"><img src="/slide-1-1.png" alt="bg"></div>
-              <div class="absolute -right-8 bottom-0 translate-y-1/2 w-[700px]"><img src="/slide-1-2.png" alt="bg"></div>
-            </swiper-slide>
-            <swiper-slide class="pl-[88px] flex slide-video group">
-              <div class="my-auto w-2/5">
-                <div class="flex">
-                  <div class="flex justify-center items-center w-[48px] h-[48px] bg-[#F1F1F9] rounded-lg"><span class="icons advertising !text-[40px] text-[#0F65E5]"></span></div>
-                  <div class="flex space-x-3 ml-2">
-                    <img src="/tiktok.svg" alt="tiktok">
-                    <img src="/google.svg" alt="google">
-                    <img src="/youtube.svg" alt="youtube">
-                    <img src="/facebook.svg" alt="facebook">
-                    <img src="/instagram.svg" alt="instagram">
-                    <img src="/twitter.svg" alt="twitter">
+                <div class="hidden md:block absolute -right-8 top-0 -translate-y-1/2 w-[700px]"><img src="/slide-1-1.png" alt="bg"></div>
+                <div class="hidden md:block absolute -right-8 bottom-0 translate-y-1/2 w-[700px]"><img src="/slide-1-2.png" alt="bg"></div>
+              </swiper-slide>
+              <swiper-slide class="!w-full md:pl-[56px] xl:pl-[88px] flex slide-video group md:py-8 lg:py-0">
+                <div class="flex relative w-full md:w-auto justify-center">
+                  <div class="absolute z-20 md:static my-auto w-[380px] md:w-2/5 max-w-[100%] md:max-w-auto px-4 md:px-0 bottom-6 max-md:group-[.active]:hidden">
+                    <div class="flex">
+                      <div class="flex justify-center items-center md:w-[48px] md:h-[48px] md:bg-[#F1F1F9] rounded-lg"><span class="icons video md:!text-[40px] text-white md:text-[#0F65E5]"></span></div>
+                      <div class="hidden md:flex space-x-3 ml-2">
+                        <img src="/tiktok.svg" alt="tiktok">
+                        <img src="/google.svg" alt="google">
+                        <img src="/youtube.svg" alt="youtube">
+                        <img src="/facebook.svg" alt="facebook">
+                        <img src="/instagram.svg" alt="instagram">
+                        <img src="/twitter.svg" alt="twitter">
+                      </div>
+                    </div>
+                    <div class="mt-2 text-white md:text-primary text-[16px] md:text-[40px] leading-[115%]">Video Recommendations</div>
+                    <div class="mt-1 md:mt-3 text-[14px] md:text-xl leading-[150%] md:leading-[30px] text-[#F1F1F9] md:text-secondary font-normal">Honest and natural video feedback from creators who will test and love your product or service. Increase your conversion with video reviews that you can use on social media and on your website.</div>
                   </div>
-                </div>
-                <div class="mt-2 text-[40px] leading-[115%]">Video Recommendations</div>
-                <div class="mt-3 text-xl leading-[30px] text-secondary font-normal">Honest and natural video feedback from creators who will test and love your product or service. Increase your conversion with video reviews that you can use on social media and on your website.</div>
-              </div>
-              <div class="relative overflow-hidden h-full w-3/5 flex justify-center items-center">
-                <div class="h-[calc(100%-70px)] w-[360px] rounded-[42px] z-10 mt-4 bg-black relative z-10">
-                  <div class="absolute -top-[10px] rounded-[42px] w-[calc(100%-20px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto"></div>
-                  <div class="absolute -top-[18px] rounded-[42px] w-[calc(100%-36px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto opacity-[0.34]"></div>
+                  <div class="relative overflow-hidden h-full w-full md:w-3/5 flex justify-center items-center">
+                    <div class="h-auto md:h-[calc(100%-70px)] max-w-[100%] w-[380px] md:w-[360px] rounded-[42px] z-10 mt-0 md:mt-4 bg-black relative z-10">
+                      <div class="hidden md:block absolute -top-[10px] rounded-[42px] w-[calc(100%-20px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto"></div>
+                      <div class="hidden md:block absolute -top-[18px] rounded-[42px] w-[calc(100%-36px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto opacity-[0.34]"></div>
 
-                  <div class="h-full rounded-[42px] overflow-hidden relative cursor-pointer">
-                    <video class="h-full object-cover" src="https://firebasestorage.googleapis.com/v0/b/viralplaceapp.appspot.com/o/video_type_preview_videos%2Ftiktok%2Creels%2Cshorts.mov?alt=media&token=6a64fa6f-0daa-4a75-b467-78e9c12ad57f"></video>
-                    <div class="absolute w-[56px] h-[56px] rounded-full bg-accent z-10 top-1/2 left-1/2 -translate-x-[28px] -translate-y-7 flex justify-center items-center group-[.active]:hidden">
-                      <span class="icons play -ml-[2px] text-white cursor-pointer"></span>
-                    </div>
-                    <div class="absolute text-white z-10 top-6 left-6 leading-[115%]">
-                      <div class="mb-2">Mike</div>
-                      <div class="flex items-center"><img src="/logo-2.svg" alt="logo" class="mr-1"> @ViralPlace</div>
+                      <div class="h-full rounded-[42px] overflow-hidden relative cursor-pointer">
+                        <video class="w-full h-full object-cover" src="https://firebasestorage.googleapis.com/v0/b/viralplaceapp.appspot.com/o/video_type_preview_videos%2Ftiktok%2Creels%2Cshorts.mov?alt=media&token=6a64fa6f-0daa-4a75-b467-78e9c12ad57f"></video>
+                        <div class="absolute w-[56px] h-[56px] rounded-full bg-accent z-10 top-1/2 left-1/2 -translate-x-[28px] -translate-y-7 flex justify-center items-center group-[.active]:hidden">
+                          <span class="icons play -ml-[2px] text-white cursor-pointer"></span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="absolute -right-8 top-0 -translate-y-1/2 w-[700px]"><img src="/slide-1-1.png" alt="bg"></div>
-              <div class="absolute -right-8 bottom-0 translate-y-1/2 w-[700px]"><img src="/slide-1-2.png" alt="bg"></div>
-            </swiper-slide>
-            <swiper-slide class="pl-[88px] flex slide-video group">
-              <div class="my-auto w-2/5">
-                <div class="flex">
-                  <div class="flex justify-center items-center w-[48px] h-[48px] bg-[#F1F1F9] rounded-lg"><span class="icons advertising !text-[40px] text-[#0F65E5]"></span></div>
-                  <div class="flex space-x-3 ml-2">
-                    <img src="/tiktok.svg" alt="tiktok">
-                    <img src="/google.svg" alt="google">
-                    <img src="/youtube.svg" alt="youtube">
-                    <img src="/facebook.svg" alt="facebook">
-                    <img src="/instagram.svg" alt="instagram">
-                    <img src="/twitter.svg" alt="twitter">
+                <div class="hidden md:block absolute -right-8 top-0 -translate-y-1/2 w-[700px]"><img src="/slide-1-1.png" alt="bg"></div>
+                <div class="hidden md:block absolute -right-8 bottom-0 translate-y-1/2 w-[700px]"><img src="/slide-1-2.png" alt="bg"></div>
+              </swiper-slide>
+              <swiper-slide class="!w-full md:pl-[56px] xl:pl-[88px] flex slide-video group md:py-8 lg:py-0">
+                <div class="flex relative w-full md:w-auto justify-center">
+                  <div class="absolute z-20 md:static my-auto w-[380px] md:w-2/5 max-w-[100%] md:max-w-auto px-4 md:px-0 bottom-6 max-md:group-[.active]:hidden">
+                    <div class="flex">
+                      <div class="flex justify-center items-center md:w-[48px] md:h-[48px] md:bg-[#F1F1F9] rounded-lg"><span class="icons recommendation md:!text-[40px] text-white md:text-[#0F65E5]"></span></div>
+                      <div class="hidden md:flex space-x-3 ml-2">
+                        <img src="/tiktok.svg" alt="tiktok">
+                        <img src="/google.svg" alt="google">
+                        <img src="/youtube.svg" alt="youtube">
+                        <img src="/facebook.svg" alt="facebook">
+                        <img src="/instagram.svg" alt="instagram">
+                        <img src="/twitter.svg" alt="twitter">
+                      </div>
+                    </div>
+                    <div class="mt-2 text-white md:text-primary text-[16px] md:text-[40px] leading-[115%]">TikTok, Reels, Shorts</div>
+                    <div class="mt-1 md:mt-3 text-[14px] md:text-xl leading-[150%] md:leading-[30px] text-[#F1F1F9] md:text-secondary font-normal">Engaging short videos for Tiktok and other platforms that will generate an interface, increase your followers and see your community and trust among customers.</div>
                   </div>
-                </div>
-                <div class="mt-2 text-[40px] leading-[115%]">Product in use</div>
-                <div class="mt-3 text-xl leading-[30px] text-secondary font-normal">This type of video presents the user using the product in a practical way, demonstrating its functions, advantages and capabilities. Thanks to this approach, potential customers can better understand how the product can meet their needs and what benefits it can bring them.</div>
-              </div>
-              <div class="relative overflow-hidden h-full w-3/5 flex justify-center items-center">
-                <div class="h-[calc(100%-70px)] w-[360px] rounded-[42px] z-10 mt-4 bg-black relative z-10">
-                  <div class="absolute -top-[10px] rounded-[42px] w-[calc(100%-20px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto"></div>
-                  <div class="absolute -top-[18px] rounded-[42px] w-[calc(100%-36px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto opacity-[0.34]"></div>
+                  <div class="relative overflow-hidden h-full w-full md:w-3/5 flex justify-center items-center">
+                    <div class="h-auto md:h-[calc(100%-70px)] max-w-[100%] w-[380px] md:w-[360px] rounded-[42px] z-10 mt-0 md:mt-4 bg-black relative z-10">
+                      <div class="hidden md:block absolute -top-[10px] rounded-[42px] w-[calc(100%-20px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto"></div>
+                      <div class="hidden md:block absolute -top-[18px] rounded-[42px] w-[calc(100%-36px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto opacity-[0.34]"></div>
 
-                  <div class="h-full rounded-[42px] overflow-hidden relative cursor-pointer">
-                    <video class="h-full object-cover" src="https://firebasestorage.googleapis.com/v0/b/viralplaceapp.appspot.com/o/video_type_preview_videos%2Funboxing.mp4?alt=media&token=d3bee4fe-ac11-40b3-b035-0c6010efde8a"></video>
-                    <div class="absolute w-[56px] h-[56px] rounded-full bg-accent z-10 top-1/2 left-1/2 -translate-x-[28px] -translate-y-7 flex justify-center items-center group-[.active]:hidden">
-                      <span class="icons play -ml-[2px] text-white cursor-pointer"></span>
-                    </div>
-                    <div class="absolute text-white z-10 top-6 left-6 leading-[115%]">
-                      <div class="mb-2">Mike</div>
-                      <div class="flex items-center"><img src="/logo-2.svg" alt="logo" class="mr-1"> @ViralPlace</div>
+                      <div class="h-full rounded-[42px] overflow-hidden relative cursor-pointer">
+                        <video class="w-full h-full object-cover" src="https://firebasestorage.googleapis.com/v0/b/viralplaceapp.appspot.com/o/video_type_preview_videos%2Fproduct_in_use.mp4?alt=media&token=df84e603-c421-49f4-bb4b-9aeeca785c23"></video>
+                        <div class="absolute w-[56px] h-[56px] rounded-full bg-accent z-10 top-1/2 left-1/2 -translate-x-[28px] -translate-y-7 flex justify-center items-center group-[.active]:hidden">
+                          <span class="icons play -ml-[2px] text-white cursor-pointer"></span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="absolute -right-8 top-0 -translate-y-1/2 w-[700px]"><img src="/slide-1-1.png" alt="bg"></div>
-              <div class="absolute -right-8 bottom-0 translate-y-1/2 w-[700px]"><img src="/slide-1-2.png" alt="bg"></div>
-            </swiper-slide>
-          </swiper-container>
+                <div class="hidden md:block absolute -right-8 top-0 -translate-y-1/2 w-[700px]"><img src="/slide-1-1.png" alt="bg"></div>
+                <div class="hidden md:block absolute -right-8 bottom-0 translate-y-1/2 w-[700px]"><img src="/slide-1-2.png" alt="bg"></div>
+              </swiper-slide>
+              <swiper-slide class="!w-full md:pl-[56px] xl:pl-[88px] flex slide-video group md:py-8 lg:py-0">
+                <div class="flex relative w-full md:w-auto justify-center">
+                  <div class="absolute z-20 md:static my-auto w-[380px] md:w-2/5 max-w-[100%] md:max-w-auto px-4 md:px-0 bottom-6 max-md:group-[.active]:hidden">
+                    <div class="flex">
+                      <div class="flex justify-center items-center md:w-[48px] md:h-[48px] md:bg-[#F1F1F9] rounded-lg"><span class="icons product md:!text-[40px] text-white md:text-[#0F65E5]"></span></div>
+                      <div class="hidden md:flex space-x-3 ml-2">
+                        <img src="/tiktok.svg" alt="tiktok">
+                        <img src="/google.svg" alt="google">
+                        <img src="/youtube.svg" alt="youtube">
+                        <img src="/facebook.svg" alt="facebook">
+                        <img src="/instagram.svg" alt="instagram">
+                        <img src="/twitter.svg" alt="twitter">
+                      </div>
+                    </div>
+                    <div class="mt-2 text-white md:text-primary text-[16px] md:text-[40px] leading-[115%]">Unboxing</div>
+                    <div class="mt-1 md:mt-3 text-[14px] md:text-xl leading-[150%] md:leading-[30px] text-[#F1F1F9] md:text-secondary font-normal">An eternally popular and effective type of video in which the creator unpacks a package with products from your company. Such a video will attract the attention of the audience, generate views and help to increase sales.</div>
+                  </div>
+                  <div class="relative overflow-hidden h-full w-full md:w-3/5 flex justify-center items-center">
+                    <div class="h-auto md:h-[calc(100%-70px)] max-w-[100%] w-[380px] md:w-[360px] rounded-[42px] z-10 mt-0 md:mt-4 bg-black relative z-10">
+                      <div class="hidden md:block absolute -top-[10px] rounded-[42px] w-[calc(100%-20px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto"></div>
+                      <div class="hidden md:block absolute -top-[18px] rounded-[42px] w-[calc(100%-36px)] h-full bg-[#606069] -z-10 left-0 right-0 mx-auto opacity-[0.34]"></div>
+
+                      <div class="h-full rounded-[42px] overflow-hidden relative cursor-pointer">
+                        <video class="w-full h-full object-cover" src="https://firebasestorage.googleapis.com/v0/b/viralplaceapp.appspot.com/o/video_type_preview_videos%2Fproduct_in_use.mp4?alt=media&token=df84e603-c421-49f4-bb4b-9aeeca785c23"></video>
+                        <div class="absolute w-[56px] h-[56px] rounded-full bg-accent z-10 top-1/2 left-1/2 -translate-x-[28px] -translate-y-7 flex justify-center items-center group-[.active]:hidden">
+                          <span class="icons play -ml-[2px] text-white cursor-pointer"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden md:block absolute -right-8 top-0 -translate-y-1/2 w-[700px]"><img src="/slide-1-1.png" alt="bg"></div>
+                <div class="hidden md:block absolute -right-8 bottom-0 translate-y-1/2 w-[700px]"><img src="/slide-1-2.png" alt="bg"></div>
+              </swiper-slide>
+            </swiper-container>
+            <div class="md:hidden slider-left absolute z-20 w-[64px] h-[48px] flex justify-center items-center rounded-[56px] bg-white left-[16px] top-0 bottom-0 my-auto"><span class="icons left text-accent !text-[32px]"></span></div>
+            <div class="md:hidden slider-right absolute z-20 w-[64px] h-[48px] flex justify-center items-center rounded-[56px] bg-white right-[16px] top-0 bottom-0 my-auto"><span class="icons right text-accent !text-[32px]"></span></div>
+          </div>
         </div>
       </div>
       <!--End Screen-3-->
       <!--Screen-4-->
-      <div id="step-container" class="flex items-start mt-2 space-x-2 relative">
-        <div id="step-thumb" class="p-10 bg-white rounded-[55px] w-1/2 flex justify-between items-center sticky top-[50%]">
-          <div class="text-[64px] leading-[115%]">Step by step process</div>
-          <div class="h-[70px] w-[88px] rounded-[18px] flex justify-center items-center bg-[#1C1C1D]"><span id="step-count" class="text-[30px] text-accent leading-none">01</span></div>
+      <div id="step-container" class="flex max-lg:flex-col items-start mt-2 lg:space-x-2 relative">
+        <div id="step-thumb" class="max-lg:text-white lg:p-10 lg:bg-white lg:rounded-[55px] w-full lg:w-1/2 flex justify-center lg:justify-between items-center lg:sticky top-[50%]">
+          <div class="max-lg:text-center max-lg:py-8 text-[40px] lg:text-[64px] leading-[115%]">Step by step process</div>
+          <div class="max-lg:hidden h-[70px] w-[88px] rounded-[18px] flex flex-shrink-0 justify-center items-center bg-[#1C1C1D]"><span id="step-count" class="text-[30px] font-semibold text-accent leading-none">01</span></div>
         </div>
-        <div class="flex w-1/2 flex-col space-y-2">
-          <div class="group step bg-white rounded-[55px] flex justify-between overflow-hidden">
-            <div class="py-10 pl-10 max-w-[60%]">
-              <div class="text-[40px] leading-[115%]">Order</div>
-              <div class="mt-2 text-[20px] text-secondary text leading-[150%] tracking-[0.6px] font-normal">Select the type of video. Add a short description, expressing your expectations for the presentation of your product or service.</div>
+        <div class="flex w-full lg:w-1/2 flex-col space-y-2">
+          <div class="group step bg-white rounded-[39px] md:rounded-[55px] flex max-sm:flex-col justify-between overflow-hidden">
+            <div class="pt-4 pb-0 sm:pb-4 md:py-10 px-4 md:pl-10 sm:max-w-[60%]">
+              <div class="max-lg:flex hidden h-[70px] w-[88px] rounded-[18px] flex flex-shrink-0 justify-center items-center bg-[#F1F1F9]"><span id="step-count" class="text-[30px] font-semibold text-accent leading-none">01</span></div>
+              <div class="max-lg:mt-2 text-[32px] md:text-[40px] leading-[115%]">Order</div>
+              <div class="mt-1 md:mt-2 text-[16px] md:text-[20px] text-secondary text leading-[150%] tracking-[0.6px] font-normal pr-2">Select the type of video. Add a short description, expressing your expectations for the presentation of your product or service.</div>
             </div>
-            <div class="mt-auto relative">
-              <img src="/item-1.png" alt="item">
+            <div class="max-sm:ml-auto max-sm:w-[90%] max-w-[400px] sm:max-w-[260px] mt-3 sm:mt-auto relative">
+              <img class="hidden sm:block" src="/item-1.png" alt="item">
+              <img class="block sm:hidden" src="/item-1-m.png" alt="item">
               <img class="absolute top-0 left-0 transition-all ease-in-out duration-300 group-[.active]:block [clip-path:polygon(0%_0%,0%_0%,0%_0%)] group-[.active]:[clip-path:polygon(0%_0%,200%_0%,0%_200%)]" src="/item-1-active.png" alt="item">
             </div>
           </div>
 
-          <div class="group step bg-white rounded-[55px] flex justify-between overflow-hidden">
-            <div class="py-10 pl-10 max-w-[60%]">
-              <div class="text-[40px] leading-[115%]">Make your payment</div>
-              <div class="mt-2 text-[20px] text-secondary text leading-[150%] tracking-[0.6px] font-normal">The price is set in advance. You don't have to waste time negotiating with the creator. There are no hidden fees.
+          <div class="group step bg-white rounded-[39px] md:rounded-[55px] flex max-sm:flex-col justify-between overflow-hidden">
+            <div class="pt-4 pb-0 sm:pb-4 md:py-10 px-4 md:pl-10 sm:max-w-[60%]">
+              <div class="max-lg:flex hidden h-[70px] w-[88px] rounded-[18px] flex flex-shrink-0 justify-center items-center bg-[#F1F1F9]"><span id="step-count" class="text-[30px] font-semibold text-accent leading-none">02</span></div>
+              <div class="max-lg:mt-2 text-[32px] md:text-[40px] leading-[115%]">Make your payment</div>
+              <div class="mt-1 md:mt-2 text-[16px] md:text-[20px] text-secondary text leading-[150%] tracking-[0.6px] font-normal pr-2">The price is set in advance. You don't have to waste time negotiating with the creator. There are no hidden fees.
                 Your money is frozen by us and safe.</div>
             </div>
-            <div class="my-auto relative">
-              <img src="/item-2.png" alt="item">
+            <div class="max-sm:ml-auto max-sm:pb-2 max-sm:w-[90%] max-w-[400px] sm:max-w-[260px] mt-3 sm:mt-auto relative">
+              <img class="hidden sm:block" src="/item-2.png" alt="item">
+              <img class="block sm:hidden" src="/item-2-m.png" alt="item">
               <img class="absolute top-0 left-0 transition-all ease-in-out duration-300 group-[.active]:block [clip-path:polygon(0%_0%,0%_0%,0%_0%)] group-[.active]:[clip-path:polygon(0%_0%,200%_0%,0%_200%)]" src="/item-2-active.png" alt="item">
             </div>
           </div>
 
-          <div class="group step bg-white rounded-[55px] flex justify-between overflow-hidden">
-            <div class="py-10 pl-10 max-w-[60%]">
-              <div class="text-[40px] leading-[115%]">Send the product</div>
-              <div class="mt-2 text-[20px] text-secondary text leading-[150%] tracking-[0.6px] font-normal">Vetted network of creators offers guaranteed security - don’t fear losing products.</div>
+          <div class="group step bg-white rounded-[39px] md:rounded-[55px] flex max-sm:flex-col justify-between overflow-hidden">
+            <div class="pt-4 pb-0 sm:pb-4 md:py-10 px-4 md:pl-10 sm:max-w-[60%]">
+              <div class="max-lg:flex hidden h-[70px] w-[88px] rounded-[18px] flex flex-shrink-0 justify-center items-center bg-[#F1F1F9]"><span id="step-count" class="text-[30px] font-semibold text-accent leading-none">03</span></div>
+              <div class="max-lg:mt-2 text-[32px] md:text-[40px] leading-[115%]">Send the product</div>
+              <div class="mt-1 md:mt-2 text-[16px] md:text-[20px] text-secondary text leading-[150%] tracking-[0.6px] font-normal pr-2">Vetted network of creators offers guaranteed security - don’t fear losing products.</div>
             </div>
-            <div class="relative">
-              <img src="/item-3.png" alt="item">
+            <div class="max-sm:ml-auto max-w-[400px] max-sm:mx-auto max-sm:w-[90%] sm:max-w-[260px] max-sm:mt-3 relative">
+              <img class="hidden sm:block" src="/item-3.png" alt="item">
+              <img class="block sm:hidden" src="/item-3-m.png" alt="item">
               <img class="absolute top-0 left-0 transition-all ease-in-out duration-300 group-[.active]:block [clip-path:polygon(0%_0%,0%_0%,0%_0%)] group-[.active]:[clip-path:polygon(0%_0%,200%_0%,0%_200%)]" src="/item-3-active.png" alt="item">
             </div>
           </div>
 
-          <div class="group step bg-white rounded-[55px] flex justify-between overflow-hidden">
-            <div class="py-10 pl-10 max-w-[60%]">
-              <div class="text-[40px] leading-[115%]">Creation process</div>
-              <div class="mt-2 text-[20px] text-secondary text leading-[150%] tracking-[0.6px] font-normal">Creators from our verified base will take care of everything - write the script, record the material, do the editing</div>
+          <div class="group step bg-white rounded-[39px] md:rounded-[55px] flex max-sm:flex-col justify-between overflow-hidden">
+            <div class="pt-4 pb-0 sm:pb-4 md:py-10 px-4 md:pl-10 sm:max-w-[60%]">
+              <div class="max-lg:flex hidden h-[70px] w-[88px] rounded-[18px] flex flex-shrink-0 justify-center items-center bg-[#F1F1F9]"><span id="step-count" class="text-[30px] font-semibold text-accent leading-none">04</span></div>
+              <div class="max-lg:mt-2 text-[32px] md:text-[40px] leading-[115%]">Creation process</div>
+              <div class="mt-1 md:mt-2 text-[16px] md:text-[20px] text-secondary text leading-[150%] tracking-[0.6px] font-normal pr-2">Creators from our verified base will take care of everything - write the script, record the material, do the editing</div>
             </div>
-            <div class="mt-auto mr-3 relative">
+            <div class="max-sm:ml-auto max-sm:mx-auto max-sm:w-[70%] max-w-[400px] sm:max-w-[240px] mt-3 sm:mt-auto mr-3 relative">
               <img src="/item-4.png" alt="item">
               <img class="absolute top-0 left-0 transition-all ease-in-out duration-300 group-[.active]:block [clip-path:polygon(0%_0%,0%_0%,0%_0%)] group-[.active]:[clip-path:polygon(0%_0%,200%_0%,0%_200%)]" src="/item-4-active.png" alt="item">
             </div>
           </div>
 
-          <div class="group step bg-white rounded-[55px] flex justify-between overflow-hidden [&.active]:bg-gradient-to-r from-[#0F65E5] from-0% to-[#0C3F8B] to-100%">
-            <div class="py-10 pl-10 max-w-[60%]">
-              <div class="text-[40px] leading-[115%] group-[.active]:text-white">Ready!</div>
-              <div class="mt-2 text-[20px] text-secondary text leading-[150%] tracking-[0.6px] font-normal group-[.active]:text-white group-[.active]:opacity-[0.8]">We send you the video. From the moment we receive your payment, you have full licensing rights to use the video for a period of 6 months to 5 years.</div>
+          <div class="group step bg-[#0F65E5] sm:bg-white rounded-[39px] md:rounded-[55px] flex max-sm:flex-col justify-between overflow-hidden [&.active]:bg-gradient-to-r from-[#0F65E5] from-0% to-[#0C3F8B] to-100%">
+            <div class="pt-4 pb-0 sm:pb-4 md:py-10 px-4 md:pl-10 sm:max-w-[60%]">
+              <div class="max-lg:flex hidden h-[70px] w-[88px] rounded-[18px] flex flex-shrink-0 justify-center items-center bg-white"><span id="step-count" class="text-[30px] font-semibold text-accent leading-none">05</span></div>
+              <div class="max-lg:mt-2 text-[32px] md:text-[40px] leading-[115%] group-[.active]:text-white max-md:text-white">Ready!</div>
+              <div class="mt-1 md:mt-2 text-[16px] md:text-[20px] text-secondary text leading-[150%] tracking-[0.6px] font-normal pr-2 max-sm:text-white max-sm:opacity-[0.8] group-[.active]:text-white group-[.active]:opacity-[0.8]">We send you the video. From the moment we receive your payment, you have full licensing rights to use the video for a period of 6 months to 5 years.</div>
             </div>
-            <div class="my-auto mr-3 relative">
-              <img src="/item-5.png" alt="item">
-              <img class="hidden absolute top-0 left-0 group-[.active]:block" src="/item-5-active.png" alt="item">
+            <div class="max-sm:ml-auto max-sm:pb-4 max-sm:mx-auto max-sm:w-[90%] max-w-[400px] sm:max-w-[240px] mt-3 sm:mt-auto mr-3 relative">
+              <img class="hidden sm:block" src="/item-5.png" alt="item">
+              <img class="block sm:hidden" src="/item-5-m.png" alt="item">
+              <img class="absolute top-0 left-0 transition-all ease-in-out duration-300 group-[.active]:block [clip-path:polygon(0%_0%,0%_0%,0%_0%)] group-[.active]:[clip-path:polygon(0%_0%,200%_0%,0%_200%)]" src="/item-5-active.png" alt="item">
             </div>
           </div>
         </div>
@@ -359,7 +395,8 @@
       <!--End Screen-4-->
 
       <!--Screen-5-->
-      <div class="flex space-x-2 mt-2">
+      <h2 class="lg:hidden text-[40px] leading-[115%] text-white text-center py-8">Offers</h2>
+      <div class="flex max-sm:flex-col max-sm:items-center max-sm:space-y-2 sm:space-x-2 mt-2">
         <div class="p-2 rounded-[37px] bg-white">
           <div><img src="/product-1.png" alt="product"></div>
           <div class="flex flex-col justify-center items-center py-8 leading-none">
@@ -398,12 +435,12 @@
       </div>
       <!--End Screen-5-->
 
-      <div class="flex items-center justify-between h-[82px] text-white px-12 text-[16px]">
+      <div class="flex max-md:flex-col items-center justify-center md:justify-between md:h-[82px] text-white max-sm:px-2 p-7 md:px-12 text-[16px]">
         <div>
-          <a href="tel:+48533517116">+48 533 517 116</a>
-          <a href="mailto:arkadi@arkadimedia.pl">arkadi@arkadimedia.pl</a>
+          <a class="max-[360px]:text-[12px] max-md:text-[16px" href="tel:+48533517116">+48 533 517 116</a>
+          <a class="max-[360px]:text-[12px] max-md:text-[16px] max-md:inline-block max-md:ml-3" href="mailto:arkadi@arkadimedia.pl">arkadi@arkadimedia.pl</a>
         </div>
-        <div>© Viral Place All rights reserved 2023</div>
+        <div class="max-[360px]:text-[12px] md:text-[16px] max-md:mt-8">© Viral Place All rights reserved 2023</div>
       </div>
 
       <!--End Container-->

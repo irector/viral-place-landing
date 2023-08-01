@@ -2,14 +2,18 @@ import './style.css'
 
 const slider = document.querySelector('#slider')!;
 const thumbs = document.querySelector('#thumbs')!;
-//
-// const sliderParams = {
-//     thumbs: {
-//         swiper: thumbs,
-//         slideThumbActiveClass: 'active'
-//     }
-// };
-//
+
+const sliderParams = {
+    thumbs: {
+        swiper: thumbs,
+        slideThumbActiveClass: 'active'
+    },
+    navigation: {
+        prevEl: '.slider-left',
+        nextEl: '.slider-right',
+    }
+};
+
 const thumbsParams = {
     slidesPerView: 'auto',
     direction: 'horizontal',
@@ -19,13 +23,14 @@ const thumbsParams = {
         }
     }
 }
-//
+
 Object.assign(thumbs, thumbsParams);
-// Object.assign(slider, sliderParams);
-//
+Object.assign(slider, sliderParams);
+
 // @ts-ignore
 thumbs.initialize();
-// slider.initialize();
+// @ts-ignore
+slider.initialize();
 
 const videoSlides = Array.from(document.querySelectorAll('.slide-video'));
 
@@ -53,13 +58,27 @@ videoSlides.forEach(slide => {
     video.addEventListener('play', addClass);
     video.addEventListener('ended', removeClass);
 
-    btn.addEventListener('click', () => {
-       video.play();
+    btn.addEventListener('click', (event) => {
+        event.stopPropagation();
+        video.play();
     });
 });
 
 slider.addEventListener('slidechange', () => videoSlides.forEach(slide => slide.querySelector('video')!.pause()));
 
+const header = document.querySelector<HTMLDivElement>('#header')!;
+
+const onScroll = () => {
+    if (window.scrollY > 100) {
+        header.classList.add('active');
+    } else {
+        header.classList.remove('active');
+    }
+
+    if (window.innerWidth > 1024) {
+        handleSteps();
+    }
+}
 
 const stepContainer = document.querySelector<HTMLDivElement>('#step-container')!;
 const stepThumb = document.querySelector<HTMLDivElement>('#step-thumb')!;
@@ -79,8 +98,6 @@ const handleSteps = () => {
     }
 };
 
-document.addEventListener('scroll', () => window.requestAnimationFrame(handleSteps), {passive: true});
+document.addEventListener('scroll', () => window.requestAnimationFrame(onScroll), {passive: true});
 
-document.addEventListener('ready', () => {
-    handleSteps();
-});
+document.addEventListener('ready', () => window.requestAnimationFrame(handleSteps), {passive: true});
