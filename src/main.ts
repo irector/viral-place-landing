@@ -11,7 +11,8 @@ const sliderParams = {
     navigation: {
         prevEl: '.slider-left',
         nextEl: '.slider-right',
-    }
+    },
+    loop: true,
 };
 
 const thumbsParams = {
